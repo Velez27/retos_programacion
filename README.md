@@ -1,2 +1,2 @@
 # retos_programacion
-Retos de programación en diferentes lenguajes
+Retos de programación en Python y JavaScript.
