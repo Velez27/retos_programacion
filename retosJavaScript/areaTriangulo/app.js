@@ -4,6 +4,9 @@ let inputSideThree = document.getElementById('sideThree');
 let buttonCalculate = document.getElementById('buttonCalculate');
 let spanTrianguleType = document.getElementById('trianguleType');
 let spanResultArea = document.getElementById('resultArea');
+let spanResult = document.getElementById('result');
+let buttonClean = document.getElementById('buttonClean');
+spanResult.hidden = true;
 
 function areaTrianguloEquilatero(sideOne, sideTwo, sideThree){
     let area = (Math.sqrt(3) / 4) * Math.pow(sideOne, 2);
@@ -68,6 +71,13 @@ buttonCalculate.addEventListener('click', () => {
         tipoTriangulo = 'Escaleno';
     }
 
+    spanResult.hidden = false;
     spanResultArea.innerHTML = resultado;
     spanTrianguleType.innerHTML = tipoTriangulo;
+});
+
+buttonClean.addEventListener('click', () => {
+    inputSideOne.value = '';
+    inputSideTwo.value = '';
+    inputSideThree.value = '';
 });
